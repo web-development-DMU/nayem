@@ -1,0 +1,373 @@
+# Copied from the web app project's student.css and lightly modified for warm colours.
+# This file defines the core styling for all student-facing pages in the Student Course Hub.
+
+/* Base reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #fdf8f4; /* light warm background */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.site-header {
+    background-color: #b45e42; /* warm primary colour */
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-nav ul li {
+    margin-left: 2rem;
+}
+
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a:focus {
+    color: #e28a6f; /* warm accent */
+}
+
+/* Main Content */
+.main-content {
+    padding: 2rem 0;
+    min-height: calc(100vh - 200px);
+}
+
+/* Programme List Styles */
+.programme-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.programme-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.programme-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.programme-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.programme-image.placeholder {
+    height: 200px;
+    background-color: #e0d6d1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #805149;
+    font-size: 1.1rem;
+}
+
+.programme-card h2 {
+    font-size: 1.5rem;
+    margin: 1rem 1rem 0.5rem;
+    color: #b45e42;
+}
+
+.programme-card p {
+    margin: 0 1rem 1rem;
+    color: #666;
+}
+
+.programme-card a {
+    display: inline-block;
+    margin: 0 1rem 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #e28a6f;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.programme-card a:hover,
+.programme-card a:focus {
+    background-color: #c26e56;
+}
+
+/* Programme Details Styles */
+.programme-details h1 {
+    color: #b45e42;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.programme-details p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.programme-details img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.programme-details h2 {
+    color: #b45e42;
+    margin: 2rem 0 1rem;
+    font-size: 1.8rem;
+}
+
+.programme-details h3 {
+    color: #c26e56;
+    margin: 1.5rem 0 0.5rem;
+    font-size: 1.4rem;
+}
+
+.programme-details ul {
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.programme-details li {
+    margin-bottom: 0.5rem;
+}
+
+/* Interest Form Styles */
+.interest-form-section {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section-header h1 {
+    color: #b45e42;
+    margin-bottom: 0.5rem;
+}
+
+.programme-name {
+    font-size: 1.2rem;
+    color: #c26e56;
+    font-weight: 500;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #e28a6f;
+    color: white;
+    border: none;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #c26e56;
+}
+
+.btn-secondary {
+    background-color: #f5f5f5;
+    color: #333;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    background-color: #e0e0e0;
+}
+
+/* Footer Styles */
+.site-footer {
+    background-color: #b45e42;
+    color: white;
+    padding: 2rem 0;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: #ffe8dc;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.footer-bottom p {
+    margin-bottom: 0;
+    color: #ffe8dc;
+}
+
+/* Login page styles */
+.login-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #fdf8f4;
+}
+
+.login-container {
+    max-width: 400px;
+    width: 100%;
+    margin: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.login-card {
+    padding: 2rem;
+}
+
+.login-header h1 {
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+    color: #b45e42;
+}
+
+.login-header p {
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.login-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.login-form input[type="text"],
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-full {
+    width: 100%;
+}
+
+.btn-primary {
+    background-color: #e28a6f;
+}
+
+.btn-primary:hover {
+    background-color: #c26e56;
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.login-footer a {
+    color: #b45e42;
+    text-decoration: none;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}

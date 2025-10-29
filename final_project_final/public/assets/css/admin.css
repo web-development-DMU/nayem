@@ -1,0 +1,127 @@
+# Copied from the web app project's admin.css.
+# This file provides styling for all admin-facing pages in the Student Course Hub.
+# The original colours were mainly blue; they have been updated to warm tones where appropriate.
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fdf8f4;
+    color: #333333;
+    line-height: 1.6;
+}
+
+.admin-header {
+    background-color: #b45e42;
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.admin-header h1 {
+    margin-left: 1.5rem;
+}
+
+.admin-nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+    background-color: #c26e56;
+}
+
+.admin-nav a {
+    color: white;
+    margin-right: 1.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.admin-nav a:hover,
+.admin-nav a:focus {
+    opacity: 0.8;
+}
+
+.content-wrapper {
+    padding: 2rem;
+}
+
+/* Cards and panels */
+.admin-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+}
+
+.admin-card h2 {
+    color: #b45e42;
+    margin-bottom: 1rem;
+}
+
+.admin-card table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+.admin-card th,
+.admin-card td {
+    padding: 0.75rem;
+    border: 1px solid #e0d6d1;
+    text-align: left;
+}
+
+.admin-card th {
+    background-color: #f7e9e5;
+    color: #b45e42;
+}
+
+.admin-card tbody tr:nth-child(even) {
+    background-color: #f9f0ed;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: #e28a6f;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #c26e56;
+}
+
+.btn-secondary {
+    background-color: #f0e6e2;
+    color: #333;
+    border: 1px solid #d9c4be;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    background-color: #e5d6d0;
+}
+
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #b45e42;
+    color: white;
+    margin-top: 2rem;
+}
